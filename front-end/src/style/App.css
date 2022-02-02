@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #E4E7EF;
+  font-family: Roboto, sans-serif;
+}
+
+aside {
+  width: 320px;
+  margin-bottom: 30px;
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: fixed;
+}
+aside strong {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  color: #333;
+}
+aside form {
+  margin-top: 30px;
+}
+aside form .input-block {
+  margin-top: 20px;
+}
+aside form .input-block label {
+  color: #acacac;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+aside form .input-block input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+aside form .input-block textarea {
+  margin-top: 7px;
+  width: 100%;
+  height: 200px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  resize: none;
+}
+aside form button {
+  width: 100%;
+  border: 0;
+  margin-top: 30px;
+  background: #FFD3CA;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+main {
+  flex: 1;
+}
+main ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  list-style: none;
+  margin-left: 350px;
+}
+
+/* Notes */
+li.notepad-infos div {
+  display: flex;
+  justify-content: space-between;
+}
+
+li.notepad-infos {
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  padding: 20px 20px 10px 20px;
+}
+
+li.notepad-infos strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+li.notepad-infos div div {
+  color: #FFeae6;
+  cursor: pointer;
+}
+li.notepad-infos div div:hover {
+  color: #eb8f7a;
+  transition: 0.2s;
+}
+
+li.notepad-infos textarea {
+  padding: 7px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 130px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  background: #fff;
+  resize: none;
+}
+
+li.notepad-infos span {
+  color: #c4c4c4;
+  cursor: pointer;
+}
+li.notepad-infos span:hover {
+  color: #eb8f7a;
+}
+
+@media (max-width: 1000px) {
+  #app {
+    flex-direction: column;
+    align-items: unset;
+  }
+  #app main {
+    margin-top: 30px;
+  }
+  #app main ul {
+    margin: auto;
+  }
+  #app aside {
+    margin: auto;
+    width: 85%;
+  }
+
+  aside {
+    position: relative;
+  }
+}
+@media (max-width: 600px) {
+  main ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

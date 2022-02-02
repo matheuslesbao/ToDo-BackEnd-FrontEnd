@@ -1,0 +1,174 @@
+@use 'variables'
+@use 'mixins'
+
+//Estilo Global
+*
+    margin: 0
+    padding: 0
+    outline: 0
+    box-sizing: 0
+
+html,body, #root
+    height: 100%
+
+body
+    background: variables.$background-primary
+    font-family: variables.$font-primary
+
+// Aside
+
+aside
+    width: 320px
+    margin-bottom: 30px
+    background: variables.$background-second
+    box-shadow: variables.$box-shadow-primary
+    border-radius: 10px
+    padding: 30px 20px
+    position: fixed
+
+    strong
+        font-size: 20px
+        text-align: center
+        display: block
+        color: variables.$text-color-primary
+        
+    form
+        margin-top: 30px
+
+        .input-block
+            margin-top: 20px
+            
+        .input-block label
+            color: variables.$text-color-second
+            font-size: 14px
+            font-weight: bold
+            display: block
+        
+        .input-block input
+            width: 100%
+            height: 32px
+            font-size: 14px
+            color: variables.$text-color-third
+            border: 0
+            @include mixins.border-bottom-primary
+
+        .input-block textarea
+            margin-top: 7px
+            width: 100%
+            height: 200px
+            font-size: 14px
+            color: variables.$text-color-third
+            border: 0
+            @include mixins.border-bottom-primary
+            background: variables.$background-second
+            resize: none
+
+        button
+            width: 100%
+            border: 0
+            margin-top: 30px
+            background: #FFD3CA
+            border-radius: 10px
+            padding: 15px 20px
+            font-size: 16px
+            font-weight: bold
+            color: #fff
+            cursor: pointer
+// App (div do React)
+
+#app
+    max-width: 1200px
+    margin: 0 auto
+    padding: 60px 30px
+
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+
+// Main
+
+main
+    flex: 1
+
+    ul
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        list-style: none
+        margin-left: 350px
+    
+li.notepad-infos div
+    display: flex
+    justify-content: space-between
+    
+li.notepad-infos
+    background: variables.$background-second
+    box-shadow: variables.$box-shadow-primary
+    border-radius: 7px
+    padding: 20px 20px 10px 20px    
+    
+li.notepad-infos strong
+    display: block
+    font-size: 16px
+    color: variables.$text-color-primary    
+    
+li.notepad-infos div div
+    color: #FFeae6       
+    cursor: pointer
+
+    &:hover
+        color: variables.$color-hover
+        transition: 0.2s
+
+li.notepad-infos textarea
+    padding: 7px
+    margin-top: 7px
+    margin-bottom: 5px
+    width: 100%
+    height: 130px
+    font-size: 14px
+    color: variables.$text-color-third
+    border: 0
+    background: variables.$background-second
+    resize: none
+
+    &:hover
+        cursor: default
+
+li.notepad-infos span
+    color: #c4c4c4
+    cursor: pointer
+    
+    &:hover
+        color: variables.$color-hover
+
+// Responsivo
+
+@media (max-width:1000px)
+
+    #app
+        flex-direction: column
+        align-items: unset
+
+        main
+            margin-top: 30px
+
+            ul
+                margin: auto
+
+        aside
+            margin: auto
+            width: 85%
+
+    aside
+        position: relative
+
+@media (max-width:600px)
+
+    main ul
+        grid-template-columns: 1fr            
+
+
+    
+
+
